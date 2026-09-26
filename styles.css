@@ -1,0 +1,105 @@
+/* ==== Global styles ==== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background-color: #121212; */
+    /* background-color: #1E1E1E; */
+    background-color: #151515;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 0.1px solid #ccc;
+    border-radius: 25px;
+
+    nav ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+        font-size: 1.2rem;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        text-decoration: underline;
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 0.1px solid #ccc;
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1rem;
+        font-size: 1.3rem;
+    }
+}
+/* ========================= */
+/* === Main page styles === */
+
+main {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#about-me {
+    display: flex;
+    justify-content: space-around;
+}
+
+#skills {
+    border: 0.1px solid #ccc;
+    border-radius: 25px;
+    padding: 1rem;
+}
+
+#featured-projects p {
+    margin: 0.5rem 0;
+    border: 0.1px solid #ccc;
+    border-radius: 25px;
+    padding: 1rem;
+}
+/* ========================= */
+/* === Project page styles === */
+
+
+/* ========================= */
+/* === Contact page styles === */
+
+
+
+/* ========================= */
+/* === Blogs page styles === */
+
+
+
+/* ========================= */
+/* === Browser arcade page styles === */
+
+
+
+/* ========================= */
