@@ -293,7 +293,33 @@ a {
 /* ========================= */
 /* === Contact page styles === */
 
+#contactpage {
+    padding: 2rem;
+    line-height: 1.6;
 
+    a {
+      all: revert;
+    }
+
+    p {
+      margin: 0.5rem;
+    }
+
+    fieldset {
+      margin: 0.5rem;
+      padding: 1rem;
+    }
+
+    button {
+      font-size: 1rem;
+      margin: 0.5rem;
+    }
+
+    #successMessage {
+      display: none;
+      margin: 0.5rem;
+    }
+}
 
 /* ========================= */
 /* === Blogs page styles === */
@@ -361,7 +387,7 @@ dialog::backdrop {
   object {
     border: 0.1px solid #ccc;
     border-radius: 15px;
-    
+
     @media (max-width: 768px) {
       height: 650px;
     }
