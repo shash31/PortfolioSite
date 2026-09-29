@@ -34,47 +34,86 @@
       </nav>
     </header>
 
-    <main>
-        <section id="tetris">
-            <iframe src="https://shash31.github.io/tetris/" title="tetris" width="500" height="400" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/tetris/">My tetris site</a></h3>
+    <main id="arcadepage">
+        <section class="game" id="tetris">
+            <button id="openTetris">Play Tetris</button>
+            <dialog id="tetrisModal">
+                <iframe src="https://shash31.github.io/tetris/" title="tetris" width="600" height="500" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/tetris/">My tetris site</a></h3>
+
+                <button id="closeTetris">Close</button>
+            </dialog>
         </section>
-        <section id="rain">
-            <iframe src="https://shash31.github.io/canvasfun/" title="rain" width="500" height="400" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/canvasfun/">Fun with canvas</a></h3>
+        <section class="game" id="rain">
+            <button id="openRain">Play Rain</button>
+            <dialog id="rainModal">
+                <iframe src="https://shash31.github.io/canvasfun/" title="rain" width="1300" height="600" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/canvasfun/">Fun with canvas</a></h3>
+
+                <button id="closeRain">Close</button>
+            </dialog>
         </section>
-        <section id="minesweeper">
-            <iframe src="https://shash31.github.io/minesweeper/" title="minesweeper" width="500" height="400" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/minesweeper/">My minesweeper site</a></h3>
+        <section class="game" id="minesweeper">
+            <button id="openMinesweeper">Play Minesweeper</button>
+            <dialog id="minesweeperModal">
+                <iframe src="https://shash31.github.io/minesweeper/" title="minesweeper" width="1000" height="850" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/minesweeper/">My minesweeper site</a></h3>
+
+                <button id="closeMinesweeper">Close</button>
+            </dialog>
         </section>
-        <section id="pong">
-            <iframe src="https://shash31.github.io/pong/" title="pong" width="500" height="400" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/pong/">Pong</a></h3>
+        <section class="game" id="pong">
+            <button id="openPong">Play Pong</button>
+            <dialog id="pongModal">
+                <iframe src="https://shash31.github.io/pong/" title="pong" width="900" height="600" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/pong/">Pong</a></h3>
+
+                <button id="closePong">Close</button>
+            </dialog>
         </section>
-        <section id="connect4">
-            <iframe src="https://shash31.github.io/connect4/" title="connect4" width="1450" height="600" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/connect4/">Connect4</a></h3>
+        <section class="game" id="connect4">
+            <button id="openConnect4">Play Connect4</button>
+            <dialog id="connect4Modal">
+                <iframe src="https://shash31.github.io/connect4/" title="connect4" width="1450" height="650" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/connect4/">Connect4</a></h3>
+
+                <button id="closeConnect4">Close</button>
+            </dialog>
         </section>
-        <section id="chess">
-            <iframe src="https://shash31.github.io/ChessEngine/" title="chess" width="750" height="350" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/ChessEngine/">Connect4</a></h3>
+        <section class='game' id='chess'>
+            <button id='openChess'>Play Chess</button>
+            <dialog id='chessModal'>
+                <iframe src='https://shash31.github.io/ChessEngine/' title='chess' width='750' height='350' loading='lazy'></iframe>
+                <h3><a href='https://shash31.github.io/ChessEngine/'>Chess</a></h3>
+                <button id='closeChess'>Close</button>
+            </dialog>
         </section>
-        <section id="multiplayertictactoe">
-            <!-- <iframe src="https://shash31.github.io/ChessEngine/" title="chess" width="750" height="350" loading="lazy"></iframe> -->
-            Not live at the moment
-            <h3><a href="https://github.com/shash31/MultiplayerTicTacToe">Multiplayer Tic Tac Toe</a></h3>
+        <section class="game" id="pacman">
+            <button id="openPacman">Play Pacman</button>
+            <dialog id="pacmanModal">
+                <iframe src="https://shash31.github.io/pacman/" title="pacman" width="850" height="500" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/pacman/">Pacman</a></h3>
+
+                <button id="closePacman">Close</button>
+            </dialog>
         </section>
-        <section id="pacman">
-            <iframe src="https://shash31.github.io/pacman/" title="pacman" width="750" height="350" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/pacman/">Pacman</a></h3>
+        <section class="game" id="snake"> 
+            <button id="openSnake">Play Snake</button>
+            <dialog id="snakeModal">
+                <iframe src="https://shash31.github.io/snake/" title="snake" width="1100" height="650" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/snake/">Snake</a></h3>
+
+                <button id="closeSnake">Close</button>
+            </dialog>
         </section>
-        <section id="snake">
-            <iframe src="https://shash31.github.io/snake/" title="snake" width="750" height="350" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/snake/">Snake</a></h3>
-        </section>
-        <section id="nonograms">
-            <iframe src="https://shash31.github.io/Nonogram/" title="nonograms" width="750" height="350" loading="lazy"></iframe>
-            <h3><a href="https://shash31.github.io/Nonogram/">Nonograms</a></h3>
+        <section class="game" id="nonograms">
+            <button id="openNonograms">Play Nonograms</button>
+            <dialog id="nonogramsModal">
+                <iframe src="https://shash31.github.io/Nonogram/" title="nonograms" width="750" height="550" loading="lazy"></iframe>
+                <h3><a href="https://shash31.github.io/Nonogram/">Nonograms</a></h3>
+
+                <button id="closeNonograms">Close</button>
+            </dialog>
         </section>
     </main>
 
@@ -104,5 +143,30 @@
         </a>
       </p>
     </footer>
+
+    <script>
+      const header = document.querySelector('header');
+      const menuBtn = document.querySelector('.menu-button');
+
+      menuBtn.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+      });
+
+      const games = document.querySelectorAll('.game');
+      games.forEach(game => {
+        const openBtn = game.querySelector('button');
+        const modal = game.querySelector('dialog');
+        const closeBtn = modal.querySelector('button');
+
+        openBtn.addEventListener('click', () => {
+          modal.showModal();
+        });
+        closeBtn.addEventListener('click', () => {
+          modal.close();
+        });
+      });
+    </script>
+
 </body>
 </html>

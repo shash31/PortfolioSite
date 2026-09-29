@@ -141,5 +141,15 @@
         </a>
       </p>
     </footer>
+
+    <script>
+      const header = document.querySelector('header');
+      const menuBtn = document.querySelector('.menu-button');
+
+      menuBtn.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('nav-open');
+        menuBtn.setAttribute('aria-expanded', isOpen);
+      });
+    </script>
   </body>
 </html>
