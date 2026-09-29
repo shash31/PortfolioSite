@@ -1,9 +1,10 @@
 /* ==== Global styles ==== */
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid white; */
 }
 
 body {
@@ -13,6 +14,9 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     padding: 1rem;
+    /* width: 100%; */
+    overflow-x: hidden;
+    /* border: 1px solid white; */
 }
 
 header {
@@ -22,23 +26,119 @@ header {
     padding: 1rem 2rem;
     border: 0.1px solid #ccc;
     border-radius: 25px;
+    position: relative; 
+    box-sizing: border-box;
 
-    nav ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        gap: 1rem;
-        font-size: 1.2rem;
+    h1 {
+        font-size: clamp(1.3rem, 4vw, 2.2rem);
+        white-space: nowrap;
+        z-index: 10; /* Keeps title above menu transitions */
     }
 
-    nav ul li a {
-        color: white;
-        text-decoration: none;
+    /* Standard Desktop Navigation layout */
+    .nav-container {
+        ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        a {
+            color: white;
+            text-decoration: none;
+            &:hover { text-decoration: underline; }
+        }
     }
 
-    nav ul li a:hover {
-        text-decoration: underline;
+    /* Hide the mobile button on desktops */
+    .menu-button {
+        display: none;
+    }
+
+    /* ==========================================
+       Mobile Viewport Layout Overrides
+       ========================================== */
+    @media (max-width: 768px) {
+        .menu-button {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 10;
+            padding: 0;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 3px;
+                background-color: #ffffff;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+                transform-origin: center;
+            }
+        }
+
+        /* The mobile drawer menu container */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Using vw isolates structural layout bounds completely */
+            height: 100vh;
+            background-color: #1a1a1a;
+            z-index: 5;
+            
+            /* Center the text elements perfectly */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* Hidden animation state */
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-100%);
+            transition: transform 0.4s ease, opacity 0.3s ease;
+
+            ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 2.5rem;
+                padding: 0;
+                width: 100%;
+
+                li {
+                    text-align: center;
+                    width: 100%;
+                    
+                    a {
+                        font-size: 1.8rem;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+
+        /* ==========================================
+           Active State Classes (Applied by JS)
+           ========================================== */
+        
+        /* Smoothly reveal the drawer */
+        &.nav-open .nav-container {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+
+        /* Transform hamburger to an 'X' right in its exact position */
+        &.nav-open .menu-button {
+            span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            span:nth-child(2) { opacity: 0; }
+            span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        }
     }
 }
 
@@ -50,8 +150,6 @@ footer {
     border-top: 0.1px solid #ccc;
 
     a {
-        color: white;
-        text-decoration: none;
         margin: 0 1rem;
         font-size: 1.3rem;
     }
@@ -59,6 +157,11 @@ footer {
     a:hover {
         color: lightblue;
     }
+}
+
+a {
+    color: white;
+    text-decoration: none;
 }
 /* ========================= */
 /* === Main page styles === */
@@ -68,6 +171,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    /* border: 1px solid white; */
+
+    @media (max-width: 768px) {
+        padding: 2rem 0.2rem;
+    }
 }
 
 #about-me {
@@ -78,6 +186,7 @@ main {
     /* gap: 2rem; */
 
     picture img {
+        max-width: 100%;
         border-radius: 50%;
         object-fit: cover;
         object-position: top;
@@ -102,6 +211,20 @@ main {
             background-color: #333;
         }
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+
+        #description-links {
+            text-align: center;
+
+            a {
+                margin: 0.5rem;
+            }
+        }
+    }
 }
 
 #skills {
@@ -110,19 +233,21 @@ main {
     padding: 1rem;
 
     h3 {
-        margin-bottom: 1rem;
-        margin-left: 0.7rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     p {
-        margin: 0.7rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     span {
         border: 0.1px solid grey;
         border-radius: 25px;
         padding: 0.5rem;
-        margin: 0.4rem;
+        /* margin: 0.4rem; */
         /* color: grey; */
     }
 }
@@ -141,6 +266,12 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    #arcade-description h3 {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
 
     a {
         border: 0.1px solid #ccc;
