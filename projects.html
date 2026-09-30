@@ -34,7 +34,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="projects-page">
       <h1>My Projects</h1>
 
       <template id="project-entry">
@@ -56,60 +56,106 @@
       </template>
 
       <!-- <template id="project-entry"> -->
-      <section id="connect4">
-        <hgroup>
-          <h2>Connect4 AI</h2>
-          <p>A minimax algorithm that plays Connect4</p>
-        </hgroup>
+      <section id="nbaproject">
+        <h2>NBA Team Performance Modeling with Hidden Markov Models</h2>
+        <ul>
+          <li>
+            Developed a probabilistic agent that models the sequential evolution of NBA team performance using HMMs to predict game outcomes.
+          </li>
+          <li>
+            Implemented Baum-Welch training and Viterbi decoding in Python to infer hidden team performance states and predict win probabilities.
+          </li>
+        </ul>
 
-        <h3>Demo Video</h3>
-        <video controls>
-          <source src="videos/connect4-demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <a href="https://github.com/aidanRik/CSE-150A-Group-Project">Link to GitHub</a>
 
-        <p>The full game can be found on my github. However here's the code for the minimax algorithm(the AI):</p>
-        <h3>Code</h3>
-        <details>
-          <summary>Click to view the code</summary>
-          <pre>
-
-          </pre>
-        </details>
       </section>
   
-      <section id="tetris">
-        <hgroup>
-          <h2>Tetris</h2>
-          <p>A Tetris game built in <code>python</code> using <code>pygame</code></p>
-        </hgroup>
+      <section id="commentclassifier">
+        <h2>Social Media Comment Classifier</h2>
 
-        <h3>Photo of the game</h3>
-        <figure>
-          <img src="images/tetris.jpg" alt="A photo of the Tetris game" width="300" height="300">
-          <figcaption>Here's how the game looks</figcaption>
-        </figure>
+        <ul>
+          <li>Worked in a group following standard ML pipelines and built Naïve Bayes and SVD Logistic Regression models using Scikit-learn to classify social media comments as toxic.</li>
+          <li>Extracted textual features using TF-IDF to represent text data for downstream classification models.</li>
+        </ul>
 
-        <h3>Demo Video</h3>
-        <video controls>
-          <source src="videos/tetris-demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <a href="https://github.com/c4ngo/CSE151A-Project">Link to GitHub</a>
+        
       </section>
 
-      <section id="#chessAI">
-        <hgroup>
-          <h2>Chess AI</h2>
-          <p>A chess AI that plays using a minimax algorithm with alpha-beta pruning</p>
-        </hgroup>
+      <section id="recipecardsite">
+        <h2>Recipe Card Site(Let me Cook)</h2>
 
-        <h3>Demo Video</h3>
-        <video controls>
-          <source src="videos/chess-demo.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+        <ul>
+          <li>Collaborated in a 10-person team to design and deploy a recipe website with user uploads, filtering, and saving features using Agile methods.</li>
+          <li>Engineered dynamic DOM manipulation routines and state-managed filtering algorithms for seamless recipe searching.</li>
+        </ul>
 
-        <h3>Code</h3>
+        <a href="https://cse110-sp25-group8.github.io/final-project/">Link to Site</a>
+        <br>
+        <a href="https://github.com/cse110-sp25-group8/final-project">Link to Github</a>
+      </section>
+
+      <section id="stockpriceanalysis">
+        <h2>Stock Price Event Analysis</h2>
+
+        <ul>
+          <li>Analyzed the impact of negative exogenous events on sectoral stock prices using hypothesis testing and regression analysis.</li>
+          <li> Researched and designed data models to compare sector-level and market-level trends.</li>
+        </ul>
+
+        <a href="https://github.com/COGS108/Group120_SP25">Link to Github</a>
+      </section>
+
+      <section id="chessai">
+        <h2>Chess AI</h2>
+
+        <ul>
+          <li>Developed a C++ chess engine (compiled to WASM) with a react UI performing at 2000 Elo.</li>
+          <li>Implemented alpha-beta pruning, transposition tables, bitboard representations, magic bitboards(for O(1) move generation).</li>
+        </ul>
+
+        <a href="https://shash31.github.io/ChessEngine/">Link to site</a>
+        <br>
+        <a href="https://github.com/shash31/ChessEngine">Link to Github</a>
+      </section>
+
+      <section id="connect4ai">
+        <h2>Connect 4 AI</h2>
+
+        <ul>
+          <li>Built a benchmarking site with several different algorithms and implementations to note amount of improvement and significance from each feature and optimization.</li>
+          <li>Engineered bitboard state representations, heuristic evaluations, different search functions to optimize connect 4 solver, benchmarking node evaluations across algorithmic variations.</li>
+        </ul>
+
+        <a href="https://shash31.github.io/connect4/">Link to site</a>
+        <br>
+        <a href="https://github.com/shash31/connect4">Link to Github</a>
+      </section>
+
+      <section id="webanalytics">
+        <h2>Full-Stack Web Analytics & Reporting Engine</h2>
+
+        <ul>
+          <li>Developed a full-stack web analytics platform featuring multi-tier Role-Based Access Control (RBAC) across Super Admin, Analyst, and Viewer permissions.</li>
+          <li>Engineered relational MySQL database schemas and Express routes to log user activity, generating dynamic data visualisations using Chart.js and automated PDF export reports.</li>
+          <li>Engineered an automated CI/CD pipeline using GitHub Actions to continuously deploy updates via SSH to a multi-vhost Apache server hosted on an Ubuntu instance.</li>
+        </ul>
+
+        <a href="https://github.com/shash31/cse135site">Link to Github</a>
+        Not live at the moment.
+      </section>
+
+      <section id="musicai">
+        <h2>Generative Music & Audio Synthesis Model</h2>
+
+        <ul>
+          <li>Built an unconditioned note language model using a pitch-token Gated Recurrent Unit (GRU) in PyTorch to generate symbolic MIDI music sequences.</li>
+          <li>Processed a dataset of ~1,599 classical piano excerpts; quantized note timing into 120-tick steps and converted compositions into pitch-token sequences across a 128-pitch vocabulary (including BOS/EOS/PAD tokens).</li>
+          <li>Partitioned dataset into a 90/10 train/validation split by file and trained the GRU model as a lightweight, expressive alternative to Markov chains and Transformers.</li>
+        </ul>
+
+        <a href="https://github.com/shash31/CSE153R_Assignment2">Link to Github</a>
       </section>
     </main>
 
