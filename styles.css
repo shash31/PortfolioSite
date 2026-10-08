@@ -351,8 +351,10 @@ a {
 
 /* ========================= */
 /* === Blogs page styles === */
-
-
+#blogs-page {
+    padding: 1.5rem;
+    line-height: 1.6;
+}
 
 /* ========================= */
 /* === Browser arcade page styles === */
@@ -361,11 +363,20 @@ a {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    /* align-items: center; */
 }
 
 .game > :first-child {
   padding: 5rem;
   font-size: 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem;
+  }
+}
+
+.game {
+    margin: 0 auto;
 }
 
 button {
